@@ -98,11 +98,17 @@
 
 
         // 设置用户名
-        var username = document.getElementById("mimi");
-        username.innerHTML = localStorage.getItem("mimi");
+        var username = document.getElementById("user-name");
+        username.innerHTML = localStorage.getItem("username");
         // 设置学号
-        var userno = document.getElementById("123");
-        userno.innerHTML = localStorage.getItem("123");
+        var userno = document.getElementById("user-no");
+        userno.innerHTML = localStorage.getItem("userno");
+      
+        function setInfo() {
+            localStorage.setItem("username", "迪");
+            localStorage.setItem("userno", "11973091068");
+            window.location.reload();
+        }      
     </script>
   </body>
 
