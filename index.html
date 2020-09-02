@@ -73,17 +73,16 @@
         var userno = document.getElementById("user-no");
         userno.innerHTML = localStorage.getItem("userno");
         // 设置进出校时间
-        var date = new Date();
-        var hour = padLeft(date.getHours());
-        var minute = padLeft(date.getMinutes());
-        var seconds = padLeft(date.getSeconds())
-        var time = document.getElementById('time');
-        time.innerHTML = hour + ":" + minute + ":" + seconds;
+ 
+          var date = new Date();
+          var today = document.getElementById("date");
+          today.innerHTML = date.getHours() + 1 + "月" + getMinutes() + "号" + getSeconds();          
+       
         // 设置校区
         var campus = document.getElementById("campus");
         campus.innerHTML = "徐汇校区";
 
-        setInterval(function() {
+        setInterval(function() {      
             date = new Date();
             var hour = padLeft(date.getHours());
             var minute = padLeft(date.getMinutes());
