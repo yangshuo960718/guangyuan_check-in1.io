@@ -14,7 +14,7 @@
     <div id="app">
       <div style="height: 3.2rem; width: 100%; background-color: #00409a; padding: 1rem;">
           <img src="img/leftarrow.png" style="height: 1.2rem;float: left;" onclick="setInfo()">
-          <div style="float:left;color: white;font-size: 1rem;font-weight: 600;margin-left: 10%">学生进出校通行证</div>
+          <div style="float:left;color: white;font-size: 1rem;font-weight: 600;margin-left: 10%">校园健康码</div>
           <img src="img/dot.png" style="height: 1.2rem;float: right;" onclick="setInfo()">
       </div>
       <div class="wrapper">
@@ -75,7 +75,7 @@
         // 设置进出校时间
         var date = new Date();
         var today = document.getElementById("date");
-        today.innerHTML = date.getMonth() + 1 + "月" + date.getDate() + "号";
+        today.innerHTML = date.date.getHours() + "：" + date.getMinutes() + ":" + date.getSeconds();
         // 设置校区
         var campus = document.getElementById("campus");
         campus.innerHTML = "徐汇校区";
