@@ -32,7 +32,8 @@
           <div class="audit">
             <!---->
             <div style="color:#004c99;font-size: 14px;" id="date"></div>
-            <div style="color:#004c99;font-size: 14px;" id="campus"></div>
+            <div style="color:#004c99;font-size: 14px;" id="road"></div>            
+            <div style="font-size: 12px;" id="campus"></div>
             <div style="color:#004c99;font-size: 14px;" id="gateno"></div>
             <!---->
             <div class="audit-status success"></div></div>
@@ -80,11 +81,13 @@
           today.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();          
        
         // 设置校区
+        var road = document.getElementById("road");
+        road.innerHTML = "广元西路门";
         var campus = document.getElementById("campus");
-        campus.innerHTML = "广元西路门";
+        campus.innerHTML = "徐汇校区";      
         var gateno = document.getElementById("gateno");
-        gateno.innerHTML = "(五号门)";      
-
+        gateno.innerHTML = "(五号门)";  
+      
         setInterval(function() {      
             date = new Date();
             var hour = padLeft(date.getHours());
